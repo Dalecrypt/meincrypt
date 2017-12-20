@@ -83,11 +83,8 @@ namespace Meincrypt
 
                     string cryptFile = outputFile;
                     FileStream fsCrypt = new FileStream(cryptFile, FileMode.Create);
-
                     RijndaelManaged RMCrypto = new RijndaelManaged();
-
                     CryptoStream cs = new CryptoStream(fsCrypt, RMCrypto.CreateEncryptor(key, iv), CryptoStreamMode.Write);
-
                     FileStream fsIn = new FileStream(inputFile, FileMode.Open);
 
                     int data;
