@@ -46,9 +46,8 @@ namespace Meincrypt.OrbStuff
         }
 
         /// <summary>
-        /// Like System.Console.ReadLine(), only with a mask.
+        /// CREDIT: @Shermy --> stackoverflow.com/a/7049688
         /// </summary>
-        /// <returns>the string the user typed in </returns>
         public static string ReadPassword()
         {
             return Meincrypt.OrbStuff.HideMe.ReadPassword('*');
