@@ -3,9 +3,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Security.Cryptography;
-using Meincrypt.OrbStuff;
-using Meincrypt.Coloring;
-using Meincrypt.Seeding;
+using Meincrypt.Terminal;
 
 namespace Meincrypt.Encrypting
 {
