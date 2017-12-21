@@ -13,8 +13,8 @@ namespace Meincrypt.Decrypting
     {
         static public void DecryptFile(string inputFile, string outputFile)
         {
-            inputFile = ("");
-            System.Console.WriteLine("\r\nFilename to decrypt:\r");
+            inputFile = "";
+            Console.WriteLine("\r\nFilename to decrypt:\r");
             inputFile = Console.ReadLine();
             Console.WriteLine("\r\nSave decrypted file as:\r");
             outputFile = Console.ReadLine();
@@ -42,27 +42,21 @@ namespace Meincrypt.Decrypting
                     cs.Close();
                     fsCrypt.Close();
                     Colors.SuccessText("\r\nSuccessfully decrypted " + "<" + inputFile + ">" + " as " + "[" + outputFile + "]" + "\n\rPress anykey..");
-                    ClearToMain();
+                    ClearTerminal.ClearToMain();
                 }
 
                 catch
                 {
                     Colors.FailText("Did you enter the correct password?\n\r Press anykey..");
-                    ClearToMain();
+                    ClearTerminal.ClearToMain();
                 }
             }
+
             catch
             {
                 Colors.FailText("Does the file exist?\n\rPress anykey..");
-                ClearToMain();
+                ClearTerminal.ClearToMain();
             }
-        }
-
-        private static void ClearToMain()
-        {
-            Console.ReadKey();
-            Console.Clear();
-            Program.Main();
         }
     }
 }

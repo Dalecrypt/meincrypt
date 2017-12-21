@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClearTerminal.cs" />
     <Compile Include="Coloring\Colors.cs" />
     <Compile Include="Decrypting\Decrypt.cs" />
     <Compile Include="Encrypting\Encrypt.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seeding\Seeds.cs" />
+    <Compile Include="UserChoice.cs" />
     <Compile Include="Welcome\Splash.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -45,7 +45,7 @@ namespace Meincrypt.Encrypting
                     //Console.WriteLine(Convert.ToString(ivSalt), Convert.ToString(keySalt));
                     Colors.SuccessText("\r\nSuccessfully encrypted " + "<" + inputFile + ">" + " as " + "[" + outputFile + "]"
                         + "\n\rPress anykey..");
-                    ClearToMain();
+                    ClearTerminal.ClearToMain();
                 }
                 else
                 {
@@ -53,7 +53,7 @@ namespace Meincrypt.Encrypting
                     Colors.FailText("PASSWORDS DO NOT MATCH!!! YOUR PASSWORD CAN NOT BE RECOVERED!\n\rIf you encrypt data and lose" +
                         " the password you will lose the data forever.\n\rTo prevent any confusion we will start over. No " +
                         "files have been changed. Press anykey to continue..");
-                    ClearToMain();
+                    ClearTerminal.ClearToMain();
                 }
             }
 
@@ -61,16 +61,8 @@ namespace Meincrypt.Encrypting
             {
                 Console.Clear();
                 Colors.FailText("ERROR! Something went wrong\n\rPress anykey..");
-                ClearToMain();
-
+                ClearTerminal.ClearToMain();
             }
-        }
-
-        private static void ClearToMain()
-        {
-            Console.ReadKey();
-            Console.Clear();
-            Program.Main();
         }
     }
 }
