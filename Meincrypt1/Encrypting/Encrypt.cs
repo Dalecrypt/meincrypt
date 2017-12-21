@@ -11,11 +11,11 @@ namespace Meincrypt.Encrypting
 {
     public class Encrypt
     {
+
         static public void EncryptFile(string inputFile, string outputFile)
         {
             try
             {
-                inputFile = ("");
                 Console.WriteLine("\r\nChoose file to encrypt:\r");
                 inputFile = Console.ReadLine();
                 Console.WriteLine("\r\nSave encrypted file as:\r");
@@ -26,6 +26,7 @@ namespace Meincrypt.Encrypting
                 string password = HideMe.ReadPassword();
                 if (password.Equals(prepass))
                 {
+
                     UnicodeEncoding UE = new UnicodeEncoding();
                     byte[] key = SHA256.Create().ComputeHash(UE.GetBytes(Seeds.keySalt + password));
                     byte[] iv = SHA256.Create().ComputeHash(UE.GetBytes(Seeds.ivSalt + password)).Take(16).ToArray();
@@ -42,7 +43,7 @@ namespace Meincrypt.Encrypting
                     fsIn.Close();
                     cs.Close();
                     fsCrypt.Close();
-                    //Console.WriteLine(Convert.ToString(ivSalt), Convert.ToString(keySalt));
+
                     Colors.SuccessText("\r\nSuccessfully encrypted " + "<" + inputFile + ">" + " as " + "[" + outputFile + "]"
                         + "\n\rPress anykey..");
                     ClearTerminal.ClearToMain();

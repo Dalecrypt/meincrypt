@@ -3,17 +3,17 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Security.Cryptography;
-using Meincrypt.Coloring;
 using Meincrypt.OrbStuff;
+using Meincrypt.Coloring;
 using Meincrypt.Seeding;
 
 namespace Meincrypt.Decrypting
 {
     public class Decrypt
     {
+
         static public void DecryptFile(string inputFile, string outputFile)
         {
-            inputFile = "";
             Console.WriteLine("\r\nFilename to decrypt:\r");
             inputFile = Console.ReadLine();
             Console.WriteLine("\r\nSave decrypted file as:\r");
